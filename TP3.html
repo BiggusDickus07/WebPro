@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Diri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        .profile-container {
+            max-width: 900px;
+            margin: auto;
+        }
+        img {
+            max-width: 300px; /* Batasi lebar maksimum gambar */
+            max-height: 300px; /* Batasi tinggi maksimum gambar */
+            width: auto;
+            height: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        iframe {
+            max-width: 100%;
+            height: 400px;
+        }
+        a {
+            color: blue;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>    
+</head>
+<body>
+    <div class="profile-container">
+        <!-- Menggunakan img untuk menampilkan foto profil -->
+        <h1>Profile Diri</h1>
+        <img src="file:/C:/Users/trena/Downloads/aNW8MNr_460s.jpg" alt="Foto Profil">
+        <h2>Informasi Pribadi</h2>
+        <!-- Tabel untuk menampilkan data pribadi -->
+        <table>
+            <tr>
+                <th>Informasi</th>
+                <th>Detail</th>
+            </tr>
+            <!-- Menggunakan tr untuk baris dan th untuk judul kolom -->
+            <tr>
+                <td>Nama</td>
+                <td>Trenady Bagas</td>
+            </tr>
+            <tr>
+                <td>Tanggal Lahir</td>
+                <td>25 April 2004</td>
+            </tr>
+            <tr>
+                <td>Alamat</td>
+                <td>Jl. Kebangsaan Timur, IKN</td>
+            </tr>
+            <!-- Tag td digunakan untuk menampilkan data dalam sel tabel -->
+        </table>
+        <h2>kontak</h2>
+        <!-- Menggunakan form untuk membuat form kontak -->
+        <form action="submit.php" method="POST">
+            <label for="name">Nama:</label>
+            <!-- Input untuk memasukkan nama -->
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="email">Email:</label>
+            <!-- Input untuk memasukkan email -->
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="message">Pesan:</label><br>
+            <!-- Textarea untuk memasukkan pesan -->
+            <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
+            
+            <!-- button untuk tombol submit -->
+            <button type="submit">Kirim</button>
+        </form>
+        <!-- Menyematkan video dari youtube menggunakan iframe -->
+        <iframe src="https://www.youtube.com/embed/J56MkSQHbag?si=eKuth7PU9rv8I9uz" frameborder="0" allowfullscreen></iframe>
+    </div>
+</body>
+</html>
