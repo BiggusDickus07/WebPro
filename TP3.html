@@ -1,98 +1,128 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile Diri</title>
+    <title>Profil Pribadi</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 20px;
         }
+
         .profile-container {
             max-width: 900px;
             margin: auto;
         }
-        img {
-            max-width: 300px; /* Batasi lebar maksimum gambar */
-            max-height: 300px; /* Batasi tinggi maksimum gambar */
-            width: auto;
-            height: auto;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
+
+        .profile-info {
+            display: flex;
+            justify-content: space-between;
             margin-bottom: 20px;
         }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
+
+        .profile-info img {
+            width: 300px;
+            height: 300px;
+            background-color: #ddd;
+            display: block;
         }
-        th {
-            background-color: #f2f2f2;
+
+        .profile-info iframe {
+            max-width: 100%;
+            height: 300px;
         }
+
+        h2 {
+            margin-top: 20px;
+        }
+
         form {
             margin-bottom: 20px;
         }
-        iframe {
-            max-width: 100%;
-            height: 400px;
+
+        ul.skills-list {
+            list-style-type: none;
+            padding: 0;
         }
+
+        ul.skills-list li {
+            margin-bottom: 10px;
+        }
+
+        ul.skills-list li span.skill-name {
+            font-weight: bold;
+        }
+
         a {
             color: blue;
             text-decoration: none;
         }
+
         a:hover {
             text-decoration: underline;
         }
-    </style>    
+    </style>
 </head>
+
 <body>
     <div class="profile-container">
-        <!-- Menggunakan img untuk menampilkan foto profil -->
-        <h1>Profile Diri</h1>
-        <img src="file:/C:/Users/trena/Downloads/aNW8MNr_460s.jpg" alt="Foto Profil">
-        <h2>Informasi Pribadi</h2>
-        <!-- Tabel untuk menampilkan data pribadi -->
-        <table>
-            <tr>
-                <th>Informasi</th>
-                <th>Detail</th>
-            </tr>
-            <!-- Menggunakan tr untuk baris dan th untuk judul kolom -->
-            <tr>
-                <td>Nama</td>
-                <td>Trenady Bagas</td>
-            </tr>
-            <tr>
-                <td>Tanggal Lahir</td>
-                <td>25 April 2004</td>
-            </tr>
-            <tr>
-                <td>Alamat</td>
-                <td>Jl. Kebangsaan Timur, IKN</td>
-            </tr>
-            <!-- Tag td digunakan untuk menampilkan data dalam sel tabel -->
-        </table>
-        <h2>kontak</h2>
-        <!-- Menggunakan form untuk membuat form kontak -->
+        <h1>Profil Pribadi</h1>
+        <div class="profile-info">
+            <!-- Gambar -->
+            <div>
+                <h2>Foto Profil</h2>
+                <img src="file:/C:/Users/trena/Downloads/aNW8MNr_460s.jpg" alt="Foto Profil">
+            </div>
+            <!-- Video -->
+            <div>
+                <h2>Video Perkenalan</h2>
+                <iframe src="https://www.youtube.com/embed/J56MkSQHbag?si=eKuth7PU9rv8I9uz" frameborder="0"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <h2>Keterampilan</h2>
+        <div class="skills-container">
+            <div class="skill-row">
+                <span>Keterampilan</span>
+                <span>Tingkat</span>
+            </div>
+            <div class="skill-row">
+                <span>HTML/CSS</span>
+                <span>Mahir</span>
+            </div>
+            <div class="skill-row">
+                <span>JavaScript</span>
+                <span>Menengah</span>
+            </div>
+            <div class="skill-row">
+                <span>Python</span>
+                <span>Pemula</span>
+            </div>
+        </div>
+
+        <h2>Hubungi Saya</h2>
+        <!-- Form kontak -->
         <form action="submit.php" method="POST">
             <label for="name">Nama:</label>
-            <!-- Input untuk memasukkan nama -->
             <input type="text" id="name" name="name" required><br><br>
             <label for="email">Email:</label>
-            <!-- Input untuk memasukkan email -->
             <input type="email" id="email" name="email" required><br><br>
             <label for="message">Pesan:</label><br>
-            <!-- Textarea untuk memasukkan pesan -->
             <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
-            
-            <!-- button untuk tombol submit -->
-            <button type="submit">Kirim</button>
+            <button type="submit">Kirim Pesan</button>
         </form>
-        <!-- Menyematkan video dari youtube menggunakan iframe -->
-        <iframe src="https://www.youtube.com/embed/J56MkSQHbag?si=eKuth7PU9rv8I9uz" frameborder="0" allowfullscreen></iframe>
+
+        <h2>Media Sosial:</h2>
+        <p>
+            <a href="#">LinkedIn</a> |
+            <a href="https://github.com/BiggusDickus07" target="_blank">GitHub</a> |
+            <a href="#">Twitter</a>
+        </p>
     </div>
 </body>
+
 </html>
